@@ -80,7 +80,7 @@ create_body = {
 }
 es.indices.create(index=index, body=create_body)
 
-df = pd.read_json("./tshirts.json")
+df = pd.read_json("tshirts.json")
 
 for _, row in tqdm(df.iterrows(), total=df.shape[0]):
     body = {
