@@ -4,7 +4,7 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
 from tqdm import tqdm
 
-ds = load_dataset('gilek19/tshirts', split='train[:1]')
+ds = load_dataset('gilek19/tshirts', split='train')
 
 blip_processor = BlipProcessor.from_pretrained('Salesforce/blip-image-captioning-large')
 blip_model = BlipForConditionalGeneration.from_pretrained('Salesforce/blip-image-captioning-large')
