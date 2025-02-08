@@ -41,6 +41,15 @@ create_body = {
                 }
             }
         },
+        "index": {
+            "similarity": {
+                "custom_bm25": {
+                    "type": "BM25",
+                    "b": 0.75,
+                    "k1": 0
+                }
+            }
+        }
     },
     "mappings": {
         "properties": {
@@ -66,6 +75,7 @@ create_body = {
             "description_blip": {
                 "type": "text",
                 "analyzer": "text_en",
+                "similarity": "custom_bm25"
             },
             "description_vector": {
                 "type": "dense_vector",

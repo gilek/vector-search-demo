@@ -70,7 +70,7 @@ export default function SearchForm({
         <FormControlLabel
           value={SearchFilterMode.VECTOR_BLIP_MINILM}
           control={<Radio />}
-          label="Vector MiniLM (BLIP)"
+          label="Vector BLIP+BERT"
         />
 
         {/*<FormControlLabel*/}
