@@ -5,6 +5,7 @@ from .es_client import EsClient
 from .search import Search
 from .vector_generator import VectorGenerator
 
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -24,7 +25,7 @@ def search_lexical_blip(query: str):
 def search_vector_blip(query: str):
     return Search().vector(
         "description_blip_vector",
-        VectorGenerator().gen_minimilm(query),
+        VectorGenerator().minimilm(query),
     )
 
 
@@ -32,7 +33,7 @@ def search_vector_blip(query: str):
 def search_vector_clip(query: str):
     return Search().vector(
         "image_vector",
-        VectorGenerator().gen_clip(query),
+        VectorGenerator().clip(query),
     )
 
 
@@ -49,7 +50,7 @@ def search_hybrid_blip(query: str):
         lexical_field="description_blip",
         lexical_query=query,
         vector_field="description_blip_vector",
-        vector_vector=VectorGenerator().gen_minimilm(query),
+        vector_vector=VectorGenerator().minimilm(query),
     )
 
 
