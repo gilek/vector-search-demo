@@ -31,16 +31,16 @@ export default function Search() {
   const resolveUri = ({ mode, query }: SearchFilters): string | null => {
     switch (mode) {
       case SearchFilterMode.LEXICAL_BLIP:
-        return `/search/lexical/blip?query=${query}`;
+        return `/api/search/lexical/blip?query=${query}`;
 
       case SearchFilterMode.VECTOR_BLIP_MINILM:
-        return `/search/vector/blip-minilm?query=${query}`;
+        return `/api/search/vector/blip-minilm?query=${query}`;
 
       // case SearchFilterMode.VECTOR_CLIP:
       //   return `/search/vector/clip?query=${query}`;
 
       case SearchFilterMode.HYBRID_BLIP:
-        return `/search/hybrid/blip?query=${query}`;
+        return `/api/search/hybrid/blip?query=${query}`;
 
       default:
         return null;
@@ -57,11 +57,11 @@ export default function Search() {
   };
 
   const handleSearchAll = () => {
-    fetchProducts("/search/all");
+    fetchProducts("/api/search/all");
   };
 
   const handleSimilarSearch = (id: string) => {
-    fetchProducts(`/search/similar/${id}`);
+    fetchProducts(`/api/search/similar/${id}`);
   };
 
   return (

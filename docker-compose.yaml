@@ -1,9 +1,25 @@
 services:
+  api:
+    build: ./api
+    ports:
+      - 8000:8000
+    volumes:
+      - ./api:/code
+    environment:
+      ES_API: ${ES_API}
+      ES_INDEX: ${ES_INDEX}
+  ui:
+    build: ./ui
+    ports:
+      - 8080:8080
+    volumes:
+      - ./api:/code
+    environment:
+      API: ${API}
   elasticsearch:
     image: elasticsearch:8.17.0
     ports:
       - 9200:9200
-      - 9300:9300
     volumes:
       - esdata:/usr/share/elasticsearch/data
     environment:
