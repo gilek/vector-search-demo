@@ -1,7 +1,6 @@
-FROM node:23
+FROM python:3.13
 
 WORKDIR /code
-COPY . /code
 
 RUN yarn install \
     && yarn run build \
@@ -9,4 +8,4 @@ RUN yarn install \
 
 RUN yarn global add http-server
 
-CMD ["http-server", "dist"]
+ENTRYPOINT entrypoint.

@@ -5,17 +5,12 @@ services:
       - 8000:8000
     volumes:
       - ./api:/code
-    environment:
-      ES_API: ${ES_API}
-      ES_INDEX: ${ES_INDEX}
   ui:
     build: ./ui
     ports:
       - 8080:8080
     volumes:
-      - ./api:/code
-    environment:
-      API: ${API}
+      - ./ui:/code
   elasticsearch:
     image: elasticsearch:8.17.0
     ports:
