@@ -1,6 +1,7 @@
 FROM python:3.13
 
 WORKDIR /code
+COPY . /code
 
 ENV POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_CREATE=false \

@@ -2,10 +2,9 @@ import os
 
 from elasticsearch import Elasticsearch
 import pandas as pd
-from dotenv import load_dotenv
 from tqdm import tqdm
 
-load_dotenv()
+
 index = os.getenv("ES_INDEX")
 es = Elasticsearch(os.getenv("ES_API"))
 

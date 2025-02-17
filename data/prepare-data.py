@@ -6,6 +6,7 @@ from PIL import Image
 from tqdm import tqdm
 from dotenv import load_dotenv
 
+
 load_dotenv()
 ds = load_dataset(getenv('HF_DATASET'), split='train')
 

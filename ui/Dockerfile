@@ -1,6 +1,7 @@
 FROM node:23
 
 WORKDIR /code
+COPY . /code
 
 RUN yarn install \
     && yarn run build \
