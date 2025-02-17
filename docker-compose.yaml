@@ -29,3 +29,6 @@ services:
 volumes:
   esdata:
     driver: local
+networks:
+  default:
+    name: search-demo

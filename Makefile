@@ -1,14 +1,17 @@
 .PHONY: build extract-images
 
-run:
+build:
+	docker compose build
+
+run: build
 	docker compose up -d
 
-.build-data-container:
+.build-data:
 	docker build data -t search-data
 
-images: .build-data-container
+images: .build-data
 	docker run --rm -v $(shell pwd)/ui/dist/images:/images --env-file $(shell pwd)/.env search-data extract-images
 
-import: .build-data-container
+import: .build-data
 	docker run --rm --env-file $(shell pwd)/.env search-data import
 

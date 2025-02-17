@@ -1,4 +1,4 @@
-FROM python:3.13
+FROM node:23
 
 WORKDIR /code
 
@@ -8,4 +8,4 @@ RUN yarn install \
 
 RUN yarn global add http-server
 
-ENTRYPOINT entrypoint.
+CMD ["http-server", "dist"]
