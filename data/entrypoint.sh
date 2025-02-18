@@ -5,4 +5,3 @@ if [ "$1" = "import" ]; then
 fi
 
 python "$1.py"
-
