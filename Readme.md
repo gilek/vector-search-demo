@@ -4,7 +4,7 @@
 
 A demo of hybrid search done in Elasticsearch. The project was never meant to be published, but over time, I thought some part of it might be useful to someone.
 
-The goal of the project was to allow users to search through a collection of photos of people wearing t-shirts. The input was just image files, without descriptions, brand names, colors, etc. The images were taken from the [Kaggle Fashon dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset), except that they have been downsized to 640px. Dataset, along with some of the original data is available at [Hugging face](https://huggingface.co/datasets/gilek19/tshirts)
+The goal of the project was to allow users to search through a collection of t-shirt photos. The input was just image files, without descriptions, brand names, colors, etc. The images were taken from the [Kaggle Fashon dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset), except that they have been downsized to 640px. Dataset, along with some of the original data is available at [Hugging face](https://huggingface.co/datasets/gilek19/tshirts)
 
 The idea was to test two options:
 - use the [BLIP](https://huggingface.co/docs/transformers/model_doc/blip) model to generate image descriptions and then through some [SBERT](https://sbert.net/docs/sentence_transformer/pretrained_models.html) models convert them to their vector representations. BLIP generates data only in English, to provide support for multiple languages, choose the [paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) model,
