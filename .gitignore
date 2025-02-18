@@ -1,9 +1,7 @@
-/node_modules/
 /.idea/
+/api/src/__pycache__/
+/data/tshirts.json
 /ui/dist/bundle.js
 /ui/dist/bundle.js.LICENSE.txt
-/api/__pycache__/
 /ui/dist/images/
-/model/dataset/
-/data/tshirts.json
-/model/
+/ui/node_modules/
