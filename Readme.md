@@ -1,5 +1,8 @@
 # Elasticsearch hybrid search demo
 
+![Screenshot](https://github.com/user-attachments/assets/6c0808dd-cf16-407a-a63d-23a650afd59c)
+
+
 A demo of hybrid search in Elasticsearch. The project was never meant to be published, but over time, I thought some part of it might be useful to someone.
 
 The goal of the project was to allow users to search through a collection of photos of people wearing T-shirts.  The input was just image files, without descriptions, brand names, color, etc. The images were taken from the [Kaggle Fashon dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset), except that they have been downsized to 640px. Dataset, along with some of the original date is available at [Hugging face](https://huggingface.co/datasets/gilek19/tshirts)
