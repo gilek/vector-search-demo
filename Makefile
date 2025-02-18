@@ -2,7 +2,7 @@ project_name = search_demo
 data_container_name = $(project_name)_data
 
 build:
-	docker compose build
+	docker compose -p $(project_name) build
 
 run:
 	docker compose -p $(project_name) up -d

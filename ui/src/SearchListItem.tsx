@@ -1,14 +1,11 @@
 import React from "react";
 import SearchItem from "./SearchItem";
 import {
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   CardMedia,
-  Divider,
   Typography,
 } from "@mui/material";
 
@@ -25,9 +22,6 @@ export default function SearchListItem({
     <Card>
       <CardMedia component="img" image={`images/${item.image}`} />
       <CardContent>
-        <Typography variant="body1" sx={{ marginBottom: "10px" }}>
-          {item.description}
-        </Typography>
         <Typography variant="body2">BLIP: {item.description_blip}</Typography>
       </CardContent>
 

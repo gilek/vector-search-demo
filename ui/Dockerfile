@@ -1,12 +1,9 @@
 FROM node:23
 
 WORKDIR /code
-COPY . /code
 
-RUN yarn install \
-    && yarn run build \
-    && rm -fr node-modules
+COPY ./entrypoint.sh /usr/local/bin
 
 RUN yarn global add http-server
 
-CMD ["http-server", "dist"]
+ENTRYPOINT ["entrypoint.sh"]
