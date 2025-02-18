@@ -1,7 +1,6 @@
 # Elasticsearch hybrid search demo
 
-![Screenshot](https://github.com/user-attachments/assets/6c0808dd-cf16-407a-a63d-23a650afd59c)
-
+![Screenshot from 2025-02-18 20-17-36](https://github.com/user-attachments/assets/190ad91a-7062-4584-aa42-722dcf6b1849)
 
 A demo of hybrid search done in Elasticsearch. The project was never meant to be published, but over time, I thought some part of it might be useful to someone.
 
@@ -20,3 +19,5 @@ When it comes to hybrid search, Elasticsearch provides an [RRF](https://www.elas
 1. `make run` builds and runs the API, UI and Elasticsearch containers,
 1. `make images` imports a set of images from the Hugging Face dataset,
 1. `make import` imports the output data from the [prepare-data.py](https://github.com/gilek/vector-search-demo/blob/master/data/prepare-data.py) script into elasticsearch.
+
+The UI by default is avilable at [http://localhost:8080](http://localhost:8080)
