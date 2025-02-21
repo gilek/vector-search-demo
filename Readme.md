@@ -20,4 +20,4 @@ When it comes to hybrid search, Elasticsearch provides an [RRF](https://www.elas
 1. `make images` imports a set of images from the Hugging Face dataset,
 1. `make import` imports the output data from the [prepare-data.py](https://github.com/gilek/vector-search-demo/blob/master/data/prepare-data.py) script into elasticsearch.
 
-The UI by default is avilable at [http://localhost:8080](http://localhost:8080)
+The UI by default is available at [http://localhost:8080](http://localhost:8080)
