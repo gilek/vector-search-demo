@@ -16,3 +16,4 @@ class RRF:
                 scores[doc_id] += 1 / (self.K + rank)
 
         return sorted(scores.items(), key=lambda x: x[1], reverse=True)
+

@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 INIT_FILE=/tmp/init
 
 if [ ! -f "$INIT_FILE" ]; then

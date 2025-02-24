@@ -73,11 +73,11 @@ export default function SearchForm({
           label="Vector BLIP+BERT"
         />
 
-        {/*<FormControlLabel*/}
-        {/*  value={SearchFilterMode.VECTOR_CLIP}*/}
-        {/*  control={<Radio />}*/}
-        {/*  label="Vector CLIP"*/}
-        {/*/>*/}
+        <FormControlLabel
+          value={SearchFilterMode.VECTOR_CLIP}
+          control={<Radio />}
+          label="Vector CLIP"
+        />
 
         <FormControlLabel
           value={SearchFilterMode.HYBRID_BLIP}

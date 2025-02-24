@@ -36,8 +36,8 @@ export default function Search() {
       case SearchFilterMode.VECTOR_BLIP_MINILM:
         return `/api/search/vector/blip-minilm?query=${query}`;
 
-      // case SearchFilterMode.VECTOR_CLIP:
-      //   return `/search/vector/clip?query=${query}`;
+      case SearchFilterMode.VECTOR_CLIP:
+        return `/api/search/vector/clip?query=${query}`;
 
       case SearchFilterMode.HYBRID_BLIP:
         return `/api/search/hybrid/blip?query=${query}`;

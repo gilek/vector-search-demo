@@ -7,12 +7,8 @@ from .rrf import RRF
 
 
 def bootstrap_di():
-    model = SentenceTransformer(
-        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-    )
     di["es_api"] = getenv("ES_API")
     di["es_index"] = getenv("ES_INDEX")
-    di["model_mini_lm"] = model
-    # di["model_clip"] = SentenceTransformer("clip-ViT-B-32-multilingual-v1")
-    di["model_clip"] = model # TODO tmp
+    di["model_clip"] = SentenceTransformer("clip-ViT-B-32")
+    di["model_mini_lm"] = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     di[RRF] = lambda di: RRF()
