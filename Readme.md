@@ -1,5 +1,7 @@
 # Elasticsearch hybrid search demo
 
+[Presentation](https://docs.google.com/presentation/d/1_UtZA1_vgfahuqO-dSebo2z3_G75rVUMUwSxA0vOikY/edit?usp=sharing)
+
 ![Screenshot from 2025-02-18 20-17-36](https://github.com/user-attachments/assets/190ad91a-7062-4584-aa42-722dcf6b1849)
 
 A demo of hybrid search done in Elasticsearch. The project was never meant to be published, but over time, I thought some part of it might be useful to someone.
